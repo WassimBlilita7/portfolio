@@ -1,0 +1,10 @@
+[
+  {
+    "role": "Master's Degree in Distributed Systems",
+    "organisation": "UFAS-1",
+    "startDate": "Sept, 2020",
+    "endDate": "June , 2025",
+    "experiences": ["Bachelor's degree in CS", "Networking and Security", "Machine Learning"],
+    "imageSrc": "history/ufas.png"
+  }
+]
