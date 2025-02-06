@@ -12,8 +12,8 @@ export const Hero = () => {
           I'm a full-stack & flutter developer with 3 years of experience using React,
           NodeJS and Flutter. Reach out if you'd like to learn more!
         </p>
-        <a href="https://www.fiverr.com/wassimblilita/" className={styles.contactBtn}>
-          Contact Me
+        <a href="assets\pdf\MyCV.pdf" className={styles.contactBtn}>
+          View CV
         </a>
       </div>
       <img
