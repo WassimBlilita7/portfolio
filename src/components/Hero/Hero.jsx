@@ -13,7 +13,7 @@ export const Hero = () => {
           NodeJS and Flutter. Reach out if you'd like to learn more!
         </p>
         <a href="https://www.mediafire.com/file/o71gddfz1vz6sx4/BLILITA_MED-WASSIM.pdf/file"  className={styles.contactBtn}>
-          View CV
+          Download CV
         </a>
       </div>
       <img
