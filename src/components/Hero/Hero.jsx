@@ -12,9 +12,7 @@ export const Hero = () => {
           I'm a full-stack & flutter developer with 3 years of experience using React,
           NodeJS and Flutter. Reach out if you'd like to learn more!
         </p>
-        <a href="https://www.mediafire.com/file/o71gddfz1vz6sx4/BLILITA_MED-WASSIM.pdf/file"  className={styles.contactBtn}>
-          Download CV
-        </a>
+        
       </div>
       <img
         src={getImageUrl("hero/wassim.png")}

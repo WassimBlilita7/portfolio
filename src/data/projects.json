@@ -1,7 +1,7 @@
 [
   {
     "title": "TWITTER CLONE",
-    "imageSrc": "projects/X.png",
+    "imageSrc": "projects/twitter.jpg",
     "description": "MERN Stack Twitter: Build a Full Stack Twitter Clone with React, Node.js and MongoDB.",
     "skills": ["React", "Express", "Node" , "MongoDB"],
     "demo": "https://www.x.com",
@@ -9,18 +9,18 @@
   },
   {
     "title": "Blood Donation App",
-    "imageSrc": "projects/blood.png",
+    "imageSrc": "projects/donation.jpg",
     "description": "This is a my first app projetcs with flutter when i was a beginner in programming.",
     "skills": ["Dart", "Flutter", "Firebase", "Google Maps API"],
     "demo": "https://www.blood.co.uk/",
     "source": "https://github.com/WassimBlilita7/blood_donation_app"
   },
   {
-    "title": "Prayers Timings",
-    "imageSrc": "projects/mosquee.jpg",
+    "title": "Ecommerce Application",
+    "imageSrc": "projects/ecommerce.png",
     "description": "Building a Prayer Timings app to help users stay connected to their faith with accurate, location-based prayer schedules",
     "skills": ["React", "Express", "Node" , "API"],
-    "demo": "https://www.islamicfinder.org/",
-    "source": "https://github.com/WassimBlilita7/Prayers-Timings"
+    "demo": "https://ar.aliexpress.com/?gatewayAdapt=glo2ara",
+    "source": "https://github.com/WassimBlilita7/Ecommerce-App"
   }
 ]

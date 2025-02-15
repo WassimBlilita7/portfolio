@@ -2,9 +2,17 @@
   {
     "role": "Master's Degree in Distributed Systems",
     "organisation": "UFAS-1",
-    "startDate": "Sept, 2020",
+    "startDate": "Sept, 2023",
     "endDate": "June , 2025",
-    "experiences": ["Bachelor's degree in CS", "Networking and Security", "Machine Learning"],
-    "imageSrc": "history/ufas.png"
+    "experiences": ["Networking Security", "REST", "SOAP"],
+    "imageSrc": "history/net.jpg"
+  } , 
+  {
+    "role": "Bachelor's Degree in Computer Science",
+    "organisation": "UFAS-1",
+    "startDate": "Sept, 2020",
+    "endDate": "June , 2023",
+    "experiences": ["Mobile Dev", "Data Structure (C++)", "Algorithms"],
+    "imageSrc": "history/Algo.jpg"
   }
 ]

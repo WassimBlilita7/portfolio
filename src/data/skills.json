@@ -26,5 +26,14 @@
   {
     "title": "Flutter",
     "imageSrc": "skills/flutter.png"
+  },
+  {
+    "title": "Java",
+    "imageSrc": "skills/java.png"
+  },
+  {
+    "title" : "Python",
+    "imageSrc" : "skills/py.png"
   }
+  
 ]
