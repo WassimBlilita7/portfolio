@@ -3,59 +3,104 @@
 .container {
   display: flex;
   flex-direction: column;
-  border-radius: 10px;
-  background: linear-gradient(180deg, #576cbc 0%, #132a53 100%);
-  box-shadow: 0 16px 14px 0 #04152d;
-  padding: 18px 24px;
-  max-width: 345px;
+  border-radius: 18px;
+  background: var(--color-bg-transparent);
+  box-shadow: 0 4px 24px 0 var(--color-shadow);
+  padding: 24px 24px 20px 24px;
+  max-width: 370px;
+  position: relative;
+  transition: transform 0.18s, box-shadow 0.18s;
+  overflow: hidden;
+}
+
+.container:hover {
+  transform: translateY(-8px) scale(1.025);
+  box-shadow: 0 8px 32px 0 var(--color-primary);
+}
+
+.accent {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 6px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--color-primary), var(--color-secondary));
+  border-radius: 6px;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 10px;
 }
 
 .image {
-  margin-bottom: 26px;
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+  object-fit: cover;
+  box-shadow: 0 2px 8px 0 var(--color-shadow);
+  background: var(--color-bg);
 }
 
 .title {
-  font-size: 25px;
+  font-size: 1.3rem;
   font-weight: 700;
-}
-
-.description {
-  margin-top: 6px;
-  font-size: 25px;
-  font-weight: 400;
+  margin-bottom: 4px;
+  color: var(--color-primary);
 }
 
 .skills {
-  width: 100%;
-  margin-top: 14px;
   display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
   gap: 6px;
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 .skill {
-  font-size: 25px;
-  font-weight: 400;
+  font-size: 0.95rem;
+  font-weight: 500;
   border-radius: 100px;
-  background: var(--color-dark);
-  padding: 2px 22px;
+  background: var(--color-gradient-start);
+  color: #fff;
+  padding: 2px 14px;
+}
+
+.description {
+  margin: 12px 0 0 0;
+  font-size: 1.05rem;
+  font-weight: 400;
+  color: var(--color-text);
+  min-height: 48px;
 }
 
 .links {
   width: 100%;
-  margin-top: 26px;
+  margin-top: 18px;
   display: flex;
-  justify-content: space-around;
+  gap: 12px;
+  justify-content: flex-end;
 }
 
 .link {
   text-decoration: none;
-  color: var(--color-text);
-  font-size: 30px;
+  color: var(--color-bg);
+  font-size: 1.05rem;
   font-weight: 600;
   border-radius: 100px;
-  background: var(--color-primary);
-  padding: 1px 22px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  padding: 7px 22px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 2px 8px 0 var(--color-shadow);
+  transition: background 0.18s, color 0.18s;
+}
+
+.link:hover {
+  background: linear-gradient(90deg, var(--color-secondary), var(--color-primary));
+  color: var(--color-text);
 }

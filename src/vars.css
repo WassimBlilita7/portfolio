@@ -1,11 +1,41 @@
 :root {
   /* Colours */
-  --color-text: #fff;
-  --color-primary: #576cbc;
-  --color-secondary: #19376d;
-  --color-dark: #0b2447;
-  --color-bg: #04152d;
+  --color-text: #f8fafc;
+  --color-primary: #00bcd4;
+  --color-secondary: #7c3aed;
+  --color-dark: #232946;
+  --color-bg: #121629;
+  --color-bg-transparent: rgba(18, 22, 41, 0.85);
+  --color-gradient-start: #00bcd4;
+  --color-gradient-end: #7c3aed;
+  --color-shadow: #232946;
+  --hero-gradient-start: #00bcd4;
+  --hero-gradient-end: #7c3aed;
+  --about-item-gradient-start: rgba(0, 188, 212, 0.15);
+  --about-item-gradient-end: rgba(124, 58, 237, 0.10);
+  --navbar-gradient-start: rgba(0, 188, 212, 0.15);
+  --navbar-gradient-end: rgba(124, 58, 237, 0.15);
+  --blur-color: rgba(0, 188, 212, 0.25);
 
   /* Fonts */
   --font-roboto: "Roboto";
+}
+
+:root[data-theme="light"] {
+  --color-text: #232946;
+  --color-primary: #7c3aed;
+  --color-secondary: #00bcd4;
+  --color-dark: #f8fafc;
+  --color-bg: #f4f7fa;
+  --color-bg-transparent: rgba(244, 247, 250, 0.85);
+  --color-gradient-start: #7c3aed;
+  --color-gradient-end: #00bcd4;
+  --color-shadow: #bdbdbd;
+  --hero-gradient-start: #7c3aed;
+  --hero-gradient-end: #00bcd4;
+  --about-item-gradient-start: rgba(124, 58, 237, 0.10);
+  --about-item-gradient-end: rgba(0, 188, 212, 0.10);
+  --navbar-gradient-start: rgba(124, 58, 237, 0.10);
+  --navbar-gradient-end: rgba(0, 188, 212, 0.10);
+  --blur-color: rgba(124, 58, 237, 0.15);
 }

@@ -13,6 +13,7 @@
   font-weight: 700;
   letter-spacing: 1.75px;
   text-transform: uppercase;
+  margin-bottom: 12px;
 }
 
 .content {
@@ -20,84 +21,161 @@
   flex-direction: row;
   justify-content: space-evenly;
   margin-top: 14px;
+  gap: 32px;
 }
 
 .skills {
   width: 45%;
   display: flex;
   flex-wrap: wrap;
-  gap: 37px;
+  gap: 24px;
+  justify-content: center;
 }
 
-.skill {
+.skillCard {
+  background: var(--color-bg-transparent);
+  border-radius: 16px;
+  box-shadow: 0 2px 12px 0 var(--color-shadow);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 11px;
+  padding: 18px 16px 12px 16px;
+  min-width: 110px;
+  transition: transform 0.18s, box-shadow 0.18s;
+}
+
+.skillCard:hover {
+  transform: translateY(-4px) scale(1.04);
+  box-shadow: 0 4px 18px 0 var(--color-primary);
 }
 
 .skillImageContainer {
-  background-color: var(--color-secondary);
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
   border-radius: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 120px;
-  height: 120px;
+  width: 80px;
+  height: 80px;
+  box-shadow: 0 2px 8px 0 var(--color-shadow);
+  margin-bottom: 6px;
 }
 
 .skillImageContainer img {
-  width: 75px;
+  width: 48px;
+  height: 48px;
 }
 
-.skill p {
-  font-size: 25px;
+.skillCard p {
+  font-size: 1.1rem;
   font-family: var(--font-roboto);
   font-weight: 500;
+  color: var(--color-primary);
 }
 
-.history {
+/* Timeline/Education */
+.historyTimeline {
   width: 45%;
   display: flex;
   flex-direction: column;
-  gap: 40px;
+  gap: 36px;
+  position: relative;
 }
 
-.historyItem {
+.historyCard {
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 17px;
-  background: #19376d;
-  background: linear-gradient(90deg, #19376d 0%, rgba(25, 55, 109, 0) 100%);
-  border-radius: 10px;
-  padding: 24px;
+  gap: 22px;
+  background: var(--color-bg-transparent);
+  border-radius: 16px;
+  box-shadow: 0 2px 12px 0 var(--color-shadow);
+  padding: 22px 24px;
+  position: relative;
+  min-height: 110px;
+  transition: box-shadow 0.18s;
 }
 
-.historyItem img {
-  width: 50px;
+.historyCard:hover {
+  box-shadow: 0 4px 18px 0 var(--color-primary);
 }
 
-.historyItemDetails {
+.timelineAccent {
+  position: absolute;
+  left: 0;
+  top: 18px;
+  width: 6px;
+  height: calc(100% - 36px);
+  background: linear-gradient(180deg, var(--color-primary), var(--color-secondary));
+  border-radius: 6px;
+  z-index: 1;
+}
+
+.historyImageWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.historyImage {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--color-primary);
+  box-shadow: 0 2px 8px 0 var(--color-shadow);
+  background: var(--color-bg);
+}
+
+.degreeIcon {
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  font-size: 1.5rem;
+  background: var(--color-primary);
+  color: var(--color-bg);
+  border-radius: 50%;
+  padding: 4px 7px;
+  box-shadow: 0 2px 8px 0 var(--color-shadow);
+  border: 2px solid var(--color-bg);
+}
+
+.historyDetails {
   font-family: var(--font-roboto);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
-.historyItemDetails h3 {
-  font-size: 30px;
+.historyDetails h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 2px;
+}
+
+.org {
+  font-size: 1.05rem;
+  color: var(--color-secondary);
   font-weight: 500;
 }
 
-.historyItemDetails p {
-  font-size: 20px;
-  font-weight: 300;
+.date {
+  font-size: 0.98rem;
+  color: var(--color-text);
+  margin-bottom: 4px;
 }
 
-.historyItemDetails ul {
+.experiences {
   margin-top: 6px;
   list-style-position: inside;
-  font-size: 25px;
+  font-size: 1.05rem;
   list-style-type: disc;
   margin-left: 17px;
+  color: var(--color-text);
+  padding-left: 0;
 }
 
 @media screen and (max-width: 830px) {
@@ -106,15 +184,41 @@
     align-items: center;
     gap: 34px;
   }
-
-  .skills {
+  .skills, .historyTimeline {
     width: 100%;
     flex-direction: row;
     justify-content: center;
   }
+  .historyTimeline {
+    gap: 18px;
+  }
+}
 
-  .history {
-    width: 100%;
-    gap: 9px;
+@media (max-width: 600px) {
+  .container {
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+  .content {
+    gap: 18px;
+  }
+  .skillCard, .historyCard {
+    min-width: unset;
+    padding: 12px 6px;
+  }
+  .historyCard {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .historyImage {
+    width: 48px;
+    height: 48px;
+  }
+  .degreeIcon {
+    font-size: 1.1rem;
+    padding: 2px 5px;
+    bottom: -6px;
+    right: -6px;
   }
 }

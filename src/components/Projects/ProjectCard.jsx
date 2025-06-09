@@ -8,28 +8,31 @@ export const ProjectCard = ({
 }) => {
   return (
     <div className={styles.container}>
-      <img
-        src={getImageUrl(imageSrc)}
-        alt={`Image of ${title}`}
-        className={styles.image}
-      />
-      <h3 className={styles.title}>{title}</h3>
+      <div className={styles.accent} />
+      <div className={styles.header}>
+        <img
+          src={getImageUrl(imageSrc)}
+          alt={`Image of ${title}`}
+          className={styles.image}
+        />
+        <div>
+          <h3 className={styles.title}>{title}</h3>
+          <ul className={styles.skills}>
+            {skills.map((skill, id) => (
+              <li key={id} className={styles.skill}>
+                {skill}
+              </li>
+            ))}
+          </ul>
+        </div>
+      </div>
       <p className={styles.description}>{description}</p>
-      <ul className={styles.skills}>
-        {skills.map((skill, id) => {
-          return (
-            <li key={id} className={styles.skill}>
-              {skill}
-            </li>
-          );
-        })}
-      </ul>
       <div className={styles.links}>
-        <a href={demo} className={styles.link}>
-          Original
+        <a href={demo} className={styles.link} target="_blank" rel="noopener noreferrer">
+          <span role="img" aria-label="demo">🔗</span> Demo
         </a>
-        <a href={source} className={styles.link}>
-          Source
+        <a href={source} className={styles.link} target="_blank" rel="noopener noreferrer">
+          <span role="img" aria-label="source">💻</span> Code
         </a>
       </div>
     </div>

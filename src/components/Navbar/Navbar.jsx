@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 
 import styles from "./Navbar.module.css";
 import { getImageUrl } from "../../utils";
+import { ThemeContext } from "../../contexts/ThemeContext";
 
 export const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { theme, toggleTheme } = useContext(ThemeContext);
 
   return (
     <nav className={styles.navbar}>
@@ -12,6 +14,9 @@ export const Navbar = () => {
         Portfolio
       </a>
       <div className={styles.menu}>
+        <button onClick={toggleTheme} className={styles.themeToggle}>
+          {theme === "dark" ? "☀️" : "🌙"}
+        </button>
         <img
           className={styles.menuBtn}
           src={

@@ -22,5 +22,13 @@
     "skills": ["React", "Express", "Node" , "API"],
     "demo": "https://ar.aliexpress.com/?gatewayAdapt=glo2ara",
     "source": "https://github.com/WassimBlilita7/Ecommerce-App"
+  } , 
+  {
+    "title": "Wassit Freelancer DZ",
+    "imageSrc": "projects/free.jpg",
+    "description": "A Freelancer Platform for Algerian Freelancers to find jobs and clients.",
+    "skills": ["React", "Express", "Node" , "API" ,"MongoDB" , "Typescript"],
+    "demo": "https://wassitfreedz.com",
+    "source": "https://github.com/WassimBlilita7/Wassit-Freelancer-DZ"
   }
 ]

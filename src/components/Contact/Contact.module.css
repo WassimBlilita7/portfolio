@@ -1,64 +1,98 @@
 @import "../../vars.css";
 
 .container {
-  color: var(--color-text);
-  margin-top: 120px;
-  background-color: var(--color-secondary);
+  width: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  width: 100vw;
-  padding: 58px 10%;
-  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  padding: 64px 0 32px 0;
+  background: none;
 }
 
-.text h2 {
-  font-size: 80px;
+.card {
+  background: var(--color-bg-transparent);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px 0 var(--color-shadow);
+  padding: 40px 48px 32px 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 320px;
+  max-width: 420px;
+  width: 100%;
+}
+
+.title {
+  font-size: 2rem;
   font-weight: 700;
-  letter-spacing: 4px;
+  color: var(--color-primary);
+  margin-bottom: 8px;
 }
 
-.text p {
-  font-size: 40px;
-  font-weight: 400;
-  letter-spacing: 2px;
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--color-text);
+  margin-bottom: 28px;
 }
 
 .links {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  list-style: none;
-  gap: 26px;
+  gap: 18px;
+  width: 100%;
+  align-items: center;
+  padding: 0;
+  margin: 0;
 }
 
 .link {
+  list-style: none;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.linkBtn {
   display: flex;
   align-items: center;
-  gap: 25px;
-}
-
-.link a {
-  color: var(--color-text);
+  gap: 12px;
+  background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+  color: var(--color-bg);
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 100px;
+  padding: 12px 32px;
   text-decoration: none;
-  font-size: 30px;
-  font-weight: 400;
-  letter-spacing: 1.5px;
+  box-shadow: 0 2px 8px 0 var(--color-shadow);
+  transition: background 0.18s, color 0.18s, transform 0.18s;
 }
 
-@media screen and (max-width: 830px) {
-  .container {
-    flex-direction: column;
-    gap: 23px;
-  }
+.linkBtn:hover {
+  background: linear-gradient(90deg, var(--color-secondary), var(--color-primary));
+  color: var(--color-text);
+  transform: translateY(-2px) scale(1.04);
+}
 
-  .text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+.icon {
+  width: 24px;
+  height: 24px;
+  filter: drop-shadow(0 1px 2px var(--color-shadow));
+}
 
-  .links {
-    align-items: center;
+@media (max-width: 600px) {
+  .card {
+    padding: 24px 8px 20px 8px;
+    min-width: unset;
+    max-width: 98vw;
+  }
+  .title {
+    font-size: 1.3rem;
+  }
+  .subtitle {
+    font-size: 1rem;
+  }
+  .linkBtn {
+    font-size: 1rem;
+    padding: 10px 12px;
   }
 }
